@@ -1,0 +1,44 @@
+.center {
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(50%); /* or try 50% */
+}
+
+.title {
+    font-size: 28px;
+    text-align: center;
+    color:#27BA9B;
+    margin-bottom: 3rem;
+    
+}
+
+
+.alert{
+    width: 90%;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+  }
+
+.show{
+    display: block !important;
+}
+
+.code {
+    position: absolute;
+    left: 350px;
+    top: 8px;
+    color: #27BA9B;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background: url('./assets/login-bg.png') no-repeat center/cover;
+}
+

@@ -1,0 +1,99 @@
+html, body{
+    height: 100%;
+}
+.wrap {
+    min-height: 100%;
+    display: flex;
+}
+
+.aside {
+    background-color: rgb(36, 36, 73);
+    width: 200px;
+    padding-top: 40px;
+}
+
+h2 {
+    color: #27BA9B;
+    text-align: center;
+}
+
+.nav {
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.nav li {
+    padding-bottom: 40px;
+}
+
+.nav li a{
+    color: white;
+    white-space: nowrap;
+    text-decoration: none;
+
+}
+
+.active {
+    color: lightskyblue !important
+}
+
+.main {
+    height: 100%;
+    flex: 1;
+}
+
+.top-nav{
+    height: 60px;
+    border-bottom: 1px solid rgb(210,210,210);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.nav-item span{
+    cursor: pointer;
+    margin: 20px;
+    margin-right: 0;
+}
+
+.content{
+    padding: 20px;
+}
+
+.card{
+    margin: 20px
+}
+
+.card-title{
+    padding-left: 20px;
+    font-size: large;
+    font: bold;
+    position: relative;
+    top: 50%;
+    transform: translateY(50%); /* or try 50% */
+    height: 50px;
+    align-items: center;
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+
+.form-check, .form-select{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.form-select{
+    width: auto;
+}
+
+.sel-form > div{
+    margin-top: 20px;
+}
+
+table img {
+    width: 100px;
+    height: 100px;
+  }
+table .bi{
+    cursor: pointer;
+}
