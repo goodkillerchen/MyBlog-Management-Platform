@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://at.alicdn.com/t/c/font_4001111_4jrdiaeyvuy.css?spm=a313x.7781069.1998910419.52&file=font_4001111_4jrdiaeyvuy.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css" rel="stylesheet">
+    <title>Home-Content Management</title>
+</head>
+
+<body>
+    <div class="alert info-box show"></div>
+    <div class="wrap">
+        <!-- side bar -->
+        <div class="aside">
+            <h2>My Blog</h2>
+            <ul class="nav">
+                <li>
+                    <a href="../content/index.html">
+                        <span class="iconfont icon-16"></span>
+                        <span>Content Mangement</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./index.html" class="active">
+                        <span class="iconfont icon-fabu"></span>
+                        <span>Post Blog</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- right side region -->
+        <div class="main">
+            <!-- top nav -->
+            <div class="top-nav">
+                <div class="nav-item">
+                    <span class="user-name">User</span>
+                    <span class="quit">Quit</span>
+                </div>
+            </div>
+            <!-- body -->
+
+            <div class="content">
+                <div class="card">
+                    <div class="card-title">Post Blog</div>
+                    <div class="card-body">
+                        <form class="blog-form">
+                            <div>
+                                <label class="form-label">Title:</label>
+                                <input type="text" class="form-control" name="title">
+                            </div>
+                            <div>
+                                <label class="form-label">Related Topic:</label>
+                                <select class="form-select" name="channel_id">
+                                </select>
+                            </div>
+                            <div class="cover">
+                                <label for="img">Cover:</label>
+                                <label for="img" class="place">+</label>
+                                <input class="img-file" type="file" name="img" id="img" hidden>
+                                <img class="rounded">
+                            </div>
+                            <div>
+                                <label for="">Content:</label>
+                                <div id="editor—wrapper">
+                                    <div id="toolbar-container"><!-- toolbar --></div>
+                                    <div id="editor-container"><!-- editor --></div>
+                                </div>
+                                <textarea name="content" class="publish-content" hidden></textarea>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-primary send">Publish</button>
+                              </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/@wangeditor/editor@latest/dist/index.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.4/axios.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.min.js"></script>
+    <script src="../../lib/form-serialize.js"></script>
+    <script src="../../utils/editor.js"></script>
+    <script src="../../utils/request.js"></script>
+    <script src="../../utils/auth.js"></script>
+    <script src="../../utils/alert.js"></script>
+    <script src="./index.js"></script>
+   
+</body>
+
+</html>

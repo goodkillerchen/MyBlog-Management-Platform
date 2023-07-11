@@ -57,12 +57,10 @@ h2 {
     margin-right: 0;
 }
 
-.content{
-    padding: 20px;
-}
-
-.card{
-    margin: 20px
+.card {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px
 }
 
 .card-title{
@@ -71,29 +69,71 @@ h2 {
     font: bold;
     position: relative;
     top: 50%;
-    transform: translateY(50%); /* or try (-50%) */
+    transform: translateY(50%); /* or try 50% */
     height: 50px;
     align-items: center;
     border-bottom: 1px solid rgb(210, 210, 210);
 }
 
-.form-check, .form-select{
+.card-body{
+    padding-top: 25px;
+}
+
+.form-control, .form-select, .form-cover{
     display: inline-block;
-    margin-left: 10px;
-}
-
-.form-select{
     width: auto;
-}
-
-.sel-form > div{
     margin-top: 20px;
 }
 
-table img {
-    width: 100px;
-    height: 100px;
-  }
-table .bi{
-    cursor: pointer;
+form > div{
+    margin-top: 20px;
 }
+
+.cover .place{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 200px;
+    border: 1px solid #ddd;
+    color: #aaa;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.cover img{
+    width: 200px;
+    height: 200px;
+}
+
+.cover .rounded{
+    display: none;
+}
+.cover .show{
+    display: inline-block;
+}
+.cover .hide{
+    display: none;
+}
+
+.alert{
+    width: 400px;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    z-index: 10000;
+  }
+.show{
+display: block;
+}
+
+#editor—wrapper {
+    border: 1px solid #ccc;
+    z-index: 100; /* If you need */
+  }
+#toolbar-container { border-bottom: 1px solid #ccc; }
+#editor-container { height: 500px; }
+  
