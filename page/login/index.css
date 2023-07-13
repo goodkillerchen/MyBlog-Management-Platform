@@ -38,7 +38,8 @@ a{
     text-decoration: none;
 }
 
-body{
-    background: url('./assets/login-bg.png') no-repeat center/cover;
+html, body{
+    background: url('./assets/login-bg.png');
+    background-size: cover
 }
 

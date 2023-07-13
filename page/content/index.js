@@ -164,13 +164,15 @@ pagination.addEventListener('click', function (e) {
             document.querySelector('[data-id=next]').parentNode.classList.remove('disabled')
         }
         if(activeBtn.innerHTML === '2'){
-            const nextBtnId = +activeBtn.dataset.id - 1
-            activeBtn.parentNode.classList.remove('active')
-            this.querySelector(`[data-id="${nextBtnId}"]`).parentNode.classList.add('active')
-            pageNum = +activeBtn.innerHTML - 1
-            this.querySelector('[data-id=pre]').parentNode.classList.add('disabled')
+            if(activeBtn.dataset.id !== '1'){
+                const nextBtnId = +activeBtn.dataset.id - 1
+                activeBtn.parentNode.classList.remove('active')
+                this.querySelector(`[data-id="${nextBtnId}"]`).parentNode.classList.add('active')
+                pageNum = +activeBtn.innerHTML - 1
+                this.querySelector('[data-id=pre]').parentNode.classList.add('disabled')
+            }
         }
-        else if(activeBtn.dataset.id === '1'){
+        if(activeBtn.dataset.id === '1'){
             this.innerHTML = `
             <li class="page-item">
                 <a class="page-link" data-id="pre" href="#" tabindex="-1">Previous</a>
@@ -188,7 +190,10 @@ pagination.addEventListener('click', function (e) {
                 <a class="page-link" data-id="next" href="#">Next</a>
             </li>
             `
-            pageNum = +activeBtn.innerHTML + 1
+            pageNum = +activeBtn.innerHTML - 1
+            if(pageNum === 1){
+                document.querySelector('[data-id=pre]').parentNode.classList.add('disabled')
+            }
         }
         else{
             const nextBtnId = +activeBtn.dataset.id - 1
@@ -199,4 +204,33 @@ pagination.addEventListener('click', function (e) {
         queryParams.page = pageNum
         setArticleLi(queryParams)
     }
+})
+
+const delBlog = async (id)=>{
+    console.log(2)
+    try{
+        const res = await axios({
+        url: `/v1_0/mp/articles/${id}`,
+        method: 'DELETE',
+        })
+        console.log(res)
+        setArticleLi(queryParams)
+    }catch(err){
+        console.log(err)
+    }
+}
+
+
+
+document.querySelector('.art-list').addEventListener('click', function(e){
+    if(e.target.classList.contains('del')){
+        const id = e.target.parentNode.dataset.id
+        console.log(id)
+        delBlog(id)
+    }
+    if(e.target.classList.contains('edit')){
+        const artId = e.target.parentNode.dataset.id
+        location.href = `../publish/index.html?id=${artId}`
+    }
+    
 })
