@@ -25,14 +25,12 @@ document.querySelector('.code').addEventListener('click', function(){
 
 const requestVerCode = (phone)=>{
     axios({
-        url: "/v1_0/sms/codes",
-        params:{
-            moblie: phone
-        }
+        url: `/v1_0/sms/codes/${phone}`,
     }).then((result) => {
         console.log(result)
     }).catch((err) => {
         console.log(err)
+        showAlert(false, 'Too Many Requests!!')
     });
 }
 
