@@ -11,3 +11,4 @@ This is a ToB(to business) platform. It is for blog managers to do CRUD operatio
 2. Content Page:
     - Content Mangement Page:
         ![](resource/contentMange.png)
+        Blog manager can edit and delte blogs by operations highlighted by the red box above. Blog manager can also manage blogs by category.
